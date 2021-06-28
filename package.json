@@ -1,0 +1,55 @@
+{
+	"$schema": "https://json.schemastore.org/package",
+	"name": "@xeho91/commitlint-config",
+	"version": "0.1.0",
+	"description": "xeho91's commitlint reusable, extendable configuration.",
+	"keywords": [
+		"commitlint-config",
+		"config",
+		"Git"
+	],
+	"license": "MIT",
+	"author": {
+		"name": "Mateusz Kadlubowski",
+		"email": "xeho91@pm.me",
+		"url": "https://xeho91.com/"
+	},
+	"homepage": "https://github.com/xeho91/commitlint-config",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/xeho91/commitlint-config.git"
+	},
+	"bugs": {
+		"url": "https://github.com/xeho91/commitlint-config/issues"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	},
+	"main": "dist/index.js",
+	"engines": {
+		"node": ">=14"
+	},
+	"files": [
+		"dist/**/*"
+	],
+	"scripts": {
+		"build": "tsc",
+		"clean": "rimraf ./dist",
+		"dev": "tsc --watch",
+		"format": "dprint fmt ./source/**/*",
+		"lint": "eslint ./source/**/*"
+	},
+	"devDependencies": {
+		"@commitlint/types": "^12.1.4",
+		"@types/node": "^15.12.5",
+		"@xeho91/eslint-config": "^0.4.2",
+		"commitlint": "^12.1.4",
+		"eslint": "^7.29.0"
+	},
+	"peerDependencies": {
+		"commitlint": "^12.1.4"
+	},
+	"dependencies": {
+		"@commitlint/config-conventional": "^12.1.4"
+	}
+}
